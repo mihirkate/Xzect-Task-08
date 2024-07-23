@@ -10,7 +10,7 @@ passport.use(
         {
             clientID: process.env.GOOGLE_CLIENT_ID, // Ensure you have environment variables set up
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-            callbackURL: process.env.GOOGLE_CALLBACK_URL
+            callbackURL: "/auth/google/callback"
         },
         function (accessToken, refreshToken, profile, cb) {
             // Code to process user data (e.g., save user profile to the database)
