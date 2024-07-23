@@ -8,9 +8,9 @@ require('dotenv').config();
 passport.use(
     new GoogleStrategy(
         {
-            clientID: process.env.CLIENT_ID, // Ensure you have environment variables set up
-            clientSecret: process.env.CLIENT_SECRET,
-            callbackURL: 'http://localhost:3000/auth/google/callback'
+            clientID: process.env.GOOGLE_CLIENT_ID, // Ensure you have environment variables set up
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            callbackURL: 'https://mihirkate-xzect-task-08.onrender.com/auth/google/callback'
         },
         function (accessToken, refreshToken, profile, cb) {
             // Code to process user data (e.g., save user profile to the database)
