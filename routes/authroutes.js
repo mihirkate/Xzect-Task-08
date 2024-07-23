@@ -2,7 +2,7 @@ const express = require('express');
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
-
+const DATABASE_URL = process.env.DATABASE_URL
 const router = express.Router();
 require('dotenv').config();
 passport.use(
@@ -10,7 +10,7 @@ passport.use(
         {
             clientID: process.env.GOOGLE_CLIENT_ID, // Ensure you have environment variables set up
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-            callbackURL: 'https://mihirkate-xzect-task-08.onrender.com/auth/google/callback'
+            callbackURL: process.env.GOOGLE_CALLBACK_URL
         },
         function (accessToken, refreshToken, profile, cb) {
             // Code to process user data (e.g., save user profile to the database)
