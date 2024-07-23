@@ -1,3 +1,5 @@
+# Official web site https://mihirkate-xzect-task-08.onrender.com/
+
 # 1.Build the Docker image:
     docker build -f Dockerfile -t task-8-dev .
  # 2.Run the Docker container:
@@ -43,12 +45,14 @@ This project provides user authentication through JWT and OAuth using Google and
 ### Update User
 - **Endpoint:** `PUT /api/v1/user/`
 - **Description:** Updates user details. Requires authentication.
-
+ ![All Users](image.png)
 ### Bulk Retrieve Users
 - **Endpoint:** `GET /api/v1/user/bulk`
 - **Description:** Retrieves a list of users. Requires authentication.
+- ![image](https://github.com/user-attachments/assets/dd2556fb-0d71-4cb3-8906-c458fe5db5e8)
 
-  ![All Users](image.png)
+
+ 
 
 ## User Roles Endpoints
 
